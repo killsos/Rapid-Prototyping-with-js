@@ -1,4 +1,4 @@
-《 敏捷开发
+敏捷开发
 Scrum/Sprint  测试驱动开发  持续集成  并行开发
 
 https://www.scrum.org/
