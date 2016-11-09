@@ -1,0 +1,72 @@
+《 敏捷开发
+Scrum/Sprint  测试驱动开发  持续集成  并行开发
+
+https://www.scrum.org/
+
+测试驱动开发 TDD
+功能测试和单元测试
+
+持续部署CD 包含自动测试和自动部署
+Jenkins
+CircleCI
+Travis CI
+
+mongoDB
+mongod        服务端    27017
+mongo         客户端    28017  nodejs
+
+git  repository
+// download
+http://git-scm.com
+
+// version
+git version
+
+// 配置用户名
+git config --global user.name "killsos"
+
+// 配置邮箱
+git config --global user.email killsos.ql@gmail.com
+
+
+ssh密钥
+可以安全连接服务器，而不需要每次输入用户名和密码
+github仓库SSH URL 和 HTTPS URL
+
+SSH URL:
+git@github.com:userName/repositoryName
+
+HTTPS URL:
+https://github.com/userName/repositoryName
+
+~ 表示当前用户的 home 目录，展开即为  /home/用户名
+在shell中以 . 开头的表示隐藏文件或目录，用ls是默认看不到的
+
+Mac/unix生成密钥步骤
+1 cd ~/.ssh
+2 ls -lah
+3 ssh-keygen -t rsa -C "your_mail"
+-t type 指定要创建的密钥类型。可以使用："rsa1"(SSH-1) "rsa"(SSH-2) "dsa"(SSH-2)
+-C comment 提供一个新注释
+
+回答它提出的问题，最好保持默认的名字id_rsa，然后复制id_rsa.pub里的内容
+4 pbcopy < ~/.ssh/id_rsa.pub
+5 或者使用系统默认的编辑器打开id_rsa.pub
+open id_rsa.pub
+
+Github
+1 复制公钥,打开并登录github.com,打开账户设置,选择“SSH key”,然后添加新的ssh 密钥
+添加一个名字
+2 检查是否可以通过ssh连接到GitHub 并输入并执行下面的命令
+ssh -T git@github.com
+
+
+推送到github
+1 git init             // 初始化一个仓库
+2 git status           // 查看状态
+3 git add .            // 添加所有文件
+4 git remote add host repository_url   
+  // git remote add <远程主机名>  <仓库网址>  这里远程主机名可以理解一个远程仓库的别名
+
+5 git push origin master
+  // git push <远程主机名> <本地分支名>:<远程分支名>
