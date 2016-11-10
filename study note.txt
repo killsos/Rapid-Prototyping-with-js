@@ -54,6 +54,15 @@ Mac/unix生成密钥步骤
 5 或者使用系统默认的编辑器打开id_rsa.pub
 open id_rsa.pub
 
+1. Windows下   使用系统自带的clip命令。
+
+2. Ubuntu下    sudo apt-get install xclip
+
+3. Linux下     使用xsel命令。   xsel < README.TXT
+
+4. Mac下       使用pbcopy命令。 # 对应有个pbpaste命令。
+
+
 Github
 1 复制公钥,打开并登录github.com,打开账户设置,选择“SSH key”,然后添加新的ssh 密钥
 添加一个名字
@@ -65,7 +74,7 @@ ssh -T git@github.com
 1 git init             // 初始化一个仓库
 2 git status           // 查看状态
 3 git add .            // 添加所有文件
-4 git remote add host repository_url   
+4 git remote add host repository_url
   // git remote add <远程主机名>  <仓库网址>  这里远程主机名可以理解一个远程仓库的别名
 
 5 git push origin master
